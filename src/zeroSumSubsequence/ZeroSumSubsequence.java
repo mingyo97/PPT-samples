@@ -1,6 +1,5 @@
 package zeroSumSubsequence;
 
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -14,7 +13,6 @@ public class ZeroSumSubsequence {
 		int count=0;
 		getLengths(lengths, n, count, list);
 		
-		System.out.println(lengths);		
 		
 		if(lengths.size()==0)
 			return 0;
@@ -30,7 +28,6 @@ public class ZeroSumSubsequence {
 	}
 	
 	private static void getLengths(List<Integer> lengths, int n, int ncount, List<Integer> sequence) {
-		System.out.println(sequence);
 		if(sequence.isEmpty()) {
 			return;
 		}else {
@@ -38,7 +35,6 @@ public class ZeroSumSubsequence {
 			for(int i:sequence) {
 				sum+=i;
 			}
-			System.out.println(n+" " + sum);
 			
 			if(n+sum==0) {
 				lengths.add(sequence.size()+ncount);
